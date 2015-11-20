@@ -1,0 +1,11 @@
+Scale=240
+Scale=100
+Language=BG
+Language=DE
+Language=ES
+Language=FR
+Language=IT
+Language=JA
+Language=KO
+Language=PL
+Language=RU

@@ -1,0 +1,549 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>DESKTOP-B5G8N85</Machine>
+    <WindowsUser>trenn</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <TargetOsVersion>6.3</TargetOsVersion>
+    <TargetOsDescription>Windows 8.1</TargetOsDescription>
+    <SolutionConfiguration>release|anycpu</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>com.ventrux.thescratchbtw</PackageIdentityName>
+    <IntermediateOutputPath>C:\Users\trenn\Desktop\TheScratch\platforms\windows\build\windows\bld\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\build\windows\release\anycpu\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\images\SplashScreen.scale-100.png">
+      <PackagePath>images\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\images\Square150x150Logo.scale-100.png">
+      <PackagePath>images\Square150x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\images\Square30x30Logo.scale-100.png">
+      <PackagePath>images\Square30x30Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\images\Square310x310Logo.scale-100.png">
+      <PackagePath>images\Square310x310Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\images\Square44x44Logo.scale-100.png">
+      <PackagePath>images\Square44x44Logo.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\images\Square70x70Logo.scale-100.png">
+      <PackagePath>images\Square70x70Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\images\Square71x71Logo.scale-100.png">
+      <PackagePath>images\Square71x71Logo.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\images\StoreLogo.scale-100.png">
+      <PackagePath>images\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\images\Wide310x150Logo.scale-100.png">
+      <PackagePath>images\Wide310x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\images\AppLogo.png">
+      <PackagePath>www\images\AppLogo.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\images\screenshots\material01.png">
+      <PackagePath>www\images\screenshots\material01.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\images\screenshots\material02.png">
+      <PackagePath>www\images\screenshots\material02.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\images\screenshots\material03.png">
+      <PackagePath>www\images\screenshots\material03.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\about.html">
+      <PackagePath>www\about.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\cc.html">
+      <PackagePath>www\cc.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\client_center.html">
+      <PackagePath>www\client_center.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\contact.html">
+      <PackagePath>www\contact.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\error.html">
+      <PackagePath>www\error.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\gallery.html">
+      <PackagePath>www\gallery.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\index.html">
+      <PackagePath>www\index.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\news.html">
+      <PackagePath>www\news.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\news_category.html">
+      <PackagePath>www\news_category.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\pub.html">
+      <PackagePath>www\pub.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\services.html">
+      <PackagePath>www\services.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\spec.html">
+      <PackagePath>www\spec.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\work.html">
+      <PackagePath>www\work.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\js-project\project.js">
+      <PackagePath>www\assets\js-project\project.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\js\bootstrap.js">
+      <PackagePath>www\assets\js\bootstrap.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\js\datepicker.js">
+      <PackagePath>www\assets\js\datepicker.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\js\form-adv-label.js">
+      <PackagePath>www\assets\js\form-adv-label.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\js\form-adv-textarea.js">
+      <PackagePath>www\assets\js\form-adv-textarea.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\js\header.js">
+      <PackagePath>www\assets\js\header.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\js\menu.js">
+      <PackagePath>www\assets\js\menu.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\js\tab.js">
+      <PackagePath>www\assets\js\tab.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\js\tile.js">
+      <PackagePath>www\assets\js\tile.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\js\toast.js">
+      <PackagePath>www\assets\js\toast.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\js\wave.js">
+      <PackagePath>www\assets\js\wave.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\js\webfont.js">
+      <PackagePath>www\assets\js\webfont.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\js\_.js">
+      <PackagePath>www\assets\js\_.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\cordova-js-src\exec.js">
+      <PackagePath>www\cordova-js-src\exec.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\cordova-js-src\platform.js">
+      <PackagePath>www\cordova-js-src\platform.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\cordova.js">
+      <PackagePath>www\cordova.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\js\base.js">
+      <PackagePath>www\js\base.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\js\base.min.js">
+      <PackagePath>www\js\base.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\js\index.js">
+      <PackagePath>www\js\index.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\js\project.js">
+      <PackagePath>www\js\project.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\js\project.min.js">
+      <PackagePath>www\js\project.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\js\push.js">
+      <PackagePath>www\js\push.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\js\pushalerts.js">
+      <PackagePath>www\js\pushalerts.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\node_modules\cordova\cordova.js">
+      <PackagePath>www\node_modules\cordova\cordova.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\node_modules\cordova\Gruntfile.js">
+      <PackagePath>www\node_modules\cordova\Gruntfile.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\node_modules\cordova\src\cli.js">
+      <PackagePath>www\node_modules\cordova\src\cli.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\node_modules\cordova\src\create.js">
+      <PackagePath>www\node_modules\cordova\src\create.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\node_modules\cordova\src\help.js">
+      <PackagePath>www\node_modules\cordova\src\help.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\node_modules\cordova\src\logger.js">
+      <PackagePath>www\node_modules\cordova\src\logger.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\plugins\jquery-1.10.2.min.js">
+      <PackagePath>www\plugins\jquery-1.10.2.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\WinJS\js\base.js">
+      <PackagePath>www\WinJS\js\base.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\sass-project\project.scss">
+      <PackagePath>www\assets\sass-project\project.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\sass\addons\material-design-icons\_core.scss">
+      <PackagePath>www\assets\sass\addons\material-design-icons\_core.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\sass\addons\material-design-icons\_larger.scss">
+      <PackagePath>www\assets\sass\addons\material-design-icons\_larger.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\sass\addons\material-design-icons\_path.scss">
+      <PackagePath>www\assets\sass\addons\material-design-icons\_path.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\sass\addons\material-design-icons\_variables.scss">
+      <PackagePath>www\assets\sass\addons\material-design-icons\_variables.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\sass\addons\_material-design-icons.scss">
+      <PackagePath>www\assets\sass\addons\_material-design-icons.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\sass\addons\_waves.scss">
+      <PackagePath>www\assets\sass\addons\_waves.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\sass\base.scss">
+      <PackagePath>www\assets\sass\base.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\sass\base\_grid.scss">
+      <PackagePath>www\assets\sass\base\_grid.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\sass\base\_reset.scss">
+      <PackagePath>www\assets\sass\base\_reset.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\sass\components\_avatar.scss">
+      <PackagePath>www\assets\sass\components\_avatar.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\sass\components\_breadcrumb.scss">
+      <PackagePath>www\assets\sass\components\_breadcrumb.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\sass\components\_button-flat.scss">
+      <PackagePath>www\assets\sass\components\_button-flat.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\sass\components\_button-float.scss">
+      <PackagePath>www\assets\sass\components\_button-float.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\sass\components\_button.scss">
+      <PackagePath>www\assets\sass\components\_button.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\sass\components\_card.scss">
+      <PackagePath>www\assets\sass\components\_card.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\sass\components\_code.scss">
+      <PackagePath>www\assets\sass\components\_code.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\sass\components\_dropdown.scss">
+      <PackagePath>www\assets\sass\components\_dropdown.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\sass\components\_form-adv-checkbox.scss">
+      <PackagePath>www\assets\sass\components\_form-adv-checkbox.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\sass\components\_form-adv-datepicker.scss">
+      <PackagePath>www\assets\sass\components\_form-adv-datepicker.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\sass\components\_form-adv-label.scss">
+      <PackagePath>www\assets\sass\components\_form-adv-label.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\sass\components\_form-adv-switch.scss">
+      <PackagePath>www\assets\sass\components\_form-adv-switch.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\sass\components\_form-adv-textarea.scss">
+      <PackagePath>www\assets\sass\components\_form-adv-textarea.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\sass\components\_form.scss">
+      <PackagePath>www\assets\sass\components\_form.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\sass\components\_label.scss">
+      <PackagePath>www\assets\sass\components\_label.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\sass\components\_modal.scss">
+      <PackagePath>www\assets\sass\components\_modal.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\sass\components\_nav.scss">
+      <PackagePath>www\assets\sass\components\_nav.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\sass\components\_progress-circular.scss">
+      <PackagePath>www\assets\sass\components\_progress-circular.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\sass\components\_progress-loadbar.scss">
+      <PackagePath>www\assets\sass\components\_progress-loadbar.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\sass\components\_progress.scss">
+      <PackagePath>www\assets\sass\components\_progress.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\sass\components\_tab.scss">
+      <PackagePath>www\assets\sass\components\_tab.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\sass\components\_table.scss">
+      <PackagePath>www\assets\sass\components\_table.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\sass\components\_tile.scss">
+      <PackagePath>www\assets\sass\components\_tile.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\sass\components\_toast.scss">
+      <PackagePath>www\assets\sass\components\_toast.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\sass\elements\_content.scss">
+      <PackagePath>www\assets\sass\elements\_content.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\sass\elements\_footer.scss">
+      <PackagePath>www\assets\sass\elements\_footer.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\sass\elements\_header.scss">
+      <PackagePath>www\assets\sass\elements\_header.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\sass\elements\_menu.scss">
+      <PackagePath>www\assets\sass\elements\_menu.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\sass\mixin\_css3.scss">
+      <PackagePath>www\assets\sass\mixin\_css3.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\sass\mixin\_grid.scss">
+      <PackagePath>www\assets\sass\mixin\_grid.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\sass\mixin\_responsive.scss">
+      <PackagePath>www\assets\sass\mixin\_responsive.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\sass\mixin\_utilities.scss">
+      <PackagePath>www\assets\sass\mixin\_utilities.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\sass\utilities\_print.scss">
+      <PackagePath>www\assets\sass\utilities\_print.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\sass\utilities\_utilities-responsive.scss">
+      <PackagePath>www\assets\sass\utilities\_utilities-responsive.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\sass\utilities\_utilities.scss">
+      <PackagePath>www\assets\sass\utilities\_utilities.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\sass\var\_colours.scss">
+      <PackagePath>www\assets\sass\var\_colours.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\assets\sass\var\_variables.scss">
+      <PackagePath>www\assets\sass\var\_variables.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\css\base.css">
+      <PackagePath>www\css\base.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\css\base.min.css">
+      <PackagePath>www\css\base.min.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\css\project.css">
+      <PackagePath>www\css\project.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\css\project.min.css">
+      <PackagePath>www\css\project.min.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\css\fonts\codepoints">
+      <PackagePath>www\css\fonts\codepoints</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\node_modules\cordova\bin\cordova">
+      <PackagePath>www\node_modules\cordova\bin\cordova</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\node_modules\cordova\LICENSE">
+      <PackagePath>www\node_modules\cordova\LICENSE</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\node_modules\cordova\NOTICE">
+      <PackagePath>www\node_modules\cordova\NOTICE</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\css\fonts\MaterialIcons-Regular.eot">
+      <PackagePath>www\css\fonts\MaterialIcons-Regular.eot</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\css\fonts\MaterialIcons-Regular.ttf">
+      <PackagePath>www\css\fonts\MaterialIcons-Regular.ttf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\css\fonts\MaterialIcons-Regular.woff">
+      <PackagePath>www\css\fonts\MaterialIcons-Regular.woff</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\css\fonts\MaterialIcons-Regular.woff2">
+      <PackagePath>www\css\fonts\MaterialIcons-Regular.woff2</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\css\fonts\README.md">
+      <PackagePath>www\css\fonts\README.md</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\node_modules\cordova\CONTRIBUTING.md">
+      <PackagePath>www\node_modules\cordova\CONTRIBUTING.md</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\node_modules\cordova\doc\bash.md">
+      <PackagePath>www\node_modules\cordova\doc\bash.md</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\node_modules\cordova\doc\de\bash.md">
+      <PackagePath>www\node_modules\cordova\doc\de\bash.md</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\node_modules\cordova\doc\de\README.md">
+      <PackagePath>www\node_modules\cordova\doc\de\README.md</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\node_modules\cordova\doc\es\bash.md">
+      <PackagePath>www\node_modules\cordova\doc\es\bash.md</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\node_modules\cordova\doc\es\README.md">
+      <PackagePath>www\node_modules\cordova\doc\es\README.md</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\node_modules\cordova\doc\fr\bash.md">
+      <PackagePath>www\node_modules\cordova\doc\fr\bash.md</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\node_modules\cordova\doc\fr\README.md">
+      <PackagePath>www\node_modules\cordova\doc\fr\README.md</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\node_modules\cordova\doc\it\bash.md">
+      <PackagePath>www\node_modules\cordova\doc\it\bash.md</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\node_modules\cordova\doc\it\README.md">
+      <PackagePath>www\node_modules\cordova\doc\it\README.md</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\node_modules\cordova\doc\ja\bash.md">
+      <PackagePath>www\node_modules\cordova\doc\ja\bash.md</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\node_modules\cordova\doc\ja\README.md">
+      <PackagePath>www\node_modules\cordova\doc\ja\README.md</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\node_modules\cordova\doc\ko\bash.md">
+      <PackagePath>www\node_modules\cordova\doc\ko\bash.md</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\node_modules\cordova\doc\ko\README.md">
+      <PackagePath>www\node_modules\cordova\doc\ko\README.md</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\node_modules\cordova\doc\pl\bash.md">
+      <PackagePath>www\node_modules\cordova\doc\pl\bash.md</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\node_modules\cordova\doc\pl\README.md">
+      <PackagePath>www\node_modules\cordova\doc\pl\README.md</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\node_modules\cordova\doc\ru\bash.md">
+      <PackagePath>www\node_modules\cordova\doc\ru\bash.md</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\node_modules\cordova\doc\zh\bash.md">
+      <PackagePath>www\node_modules\cordova\doc\zh\bash.md</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\node_modules\cordova\doc\zh\README.md">
+      <PackagePath>www\node_modules\cordova\doc\zh\README.md</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\node_modules\cordova\README.md">
+      <PackagePath>www\node_modules\cordova\README.md</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\node_modules\cordova\RELEASENOTES.md">
+      <PackagePath>www\node_modules\cordova\RELEASENOTES.md</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\css\images\bg\amber.jpg">
+      <PackagePath>www\css\images\bg\amber.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\css\images\bg\brand.jpg">
+      <PackagePath>www\css\images\bg\brand.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\css\images\bg\green.jpg">
+      <PackagePath>www\css\images\bg\green.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\css\images\bg\purple.jpg">
+      <PackagePath>www\css\images\bg\purple.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\css\images\bg\red.jpg">
+      <PackagePath>www\css\images\bg\red.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\css\images\bg\teal.jpg">
+      <PackagePath>www\css\images\bg\teal.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\images\samples\landscape.jpg">
+      <PackagePath>www\images\samples\landscape.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\images\samples\portrait.jpg">
+      <PackagePath>www\images\samples\portrait.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\images\users\avatar-001.jpg">
+      <PackagePath>www\images\users\avatar-001.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\node_modules\cordova\.npmignore">
+      <PackagePath>www\node_modules\cordova\.npmignore</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\node_modules\cordova\.ratignore">
+      <PackagePath>www\node_modules\cordova\.ratignore</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\node_modules\cordova\.travis.yml">
+      <PackagePath>www\node_modules\cordova\.travis.yml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\node_modules\cordova\appveyor.yml">
+      <PackagePath>www\node_modules\cordova\appveyor.yml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\node_modules\cordova\bin\cordova.cmd">
+      <PackagePath>www\node_modules\cordova\bin\cordova.cmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\node_modules\cordova\doc\build.txt">
+      <PackagePath>www\node_modules\cordova\doc\build.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\node_modules\cordova\doc\clean.txt">
+      <PackagePath>www\node_modules\cordova\doc\clean.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\node_modules\cordova\doc\compile.txt">
+      <PackagePath>www\node_modules\cordova\doc\compile.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\node_modules\cordova\doc\cordova.txt">
+      <PackagePath>www\node_modules\cordova\doc\cordova.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\node_modules\cordova\doc\create.txt">
+      <PackagePath>www\node_modules\cordova\doc\create.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\node_modules\cordova\doc\emulate.txt">
+      <PackagePath>www\node_modules\cordova\doc\emulate.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\node_modules\cordova\doc\help.txt">
+      <PackagePath>www\node_modules\cordova\doc\help.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\node_modules\cordova\doc\info.txt">
+      <PackagePath>www\node_modules\cordova\doc\info.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\node_modules\cordova\doc\platform.txt">
+      <PackagePath>www\node_modules\cordova\doc\platform.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\node_modules\cordova\doc\plugin.txt">
+      <PackagePath>www\node_modules\cordova\doc\plugin.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\node_modules\cordova\doc\prepare.txt">
+      <PackagePath>www\node_modules\cordova\doc\prepare.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\node_modules\cordova\doc\requirements.txt">
+      <PackagePath>www\node_modules\cordova\doc\requirements.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\node_modules\cordova\doc\run.txt">
+      <PackagePath>www\node_modules\cordova\doc\run.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\node_modules\cordova\doc\serve.txt">
+      <PackagePath>www\node_modules\cordova\doc\serve.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\node_modules\cordova\package.json">
+      <PackagePath>www\node_modules\cordova\package.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\www\node_modules\cordova\scripts\cordova.completion">
+      <PackagePath>www\node_modules\cordova\scripts\cordova.completion</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\config.xml">
+      <PackagePath>config.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trenn\Desktop\TheScratch\platforms\windows\build\windows\release\anycpu\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.WinJS.2.0\1.0\">
+      <Name>Microsoft.WinJS.2.0</Name>
+      <Version>1.0.9600.17018</Version>
+      <Architecture>Neutral</Architecture>
+      <FrameworkIdentity>Name=Microsoft.WinJS.2.0, MinVersion=1.0.9600.17018</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.WinJS.2.0\1.0\Microsoft.WinJS.2.0.appx</AppxLocation>
+      <MoreInfo>http://go.microsoft.com/fwlink/%3fLinkId=260891</MoreInfo>
+    </ResolvedSDKReference>
+  </ItemGroup>
+</Project>

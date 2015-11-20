@@ -4,50 +4,8 @@
         "uninstalled": []
     },
     "config_munge": {
-        "files": {
-            "config.xml": {
-                "parents": {
-                    "/*": []
-                }
-            }
-        }
+        "files": {}
     },
-    "installed_plugins": {
-        "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "The Scratch"
-        },
-        "cordova-plugin-splashscreen": {
-            "PACKAGE_NAME": "The Scratch"
-        },
-        "cordova-plugin-pushnotification-parsepushnotification": {
-            "PACKAGE_NAME": "The Scratch"
-        }
-    },
-    "dependent_plugins": {},
-    "modules": [
-        {
-            "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
-            "id": "cordova-plugin-splashscreen.SplashScreen",
-            "pluginId": "cordova-plugin-splashscreen",
-            "clobbers": [
-                "navigator.splashscreen"
-            ]
-        },
-        {
-            "file": "plugins/cordova-plugin-splashscreen/www/windows/SplashScreenProxy.js",
-            "id": "cordova-plugin-splashscreen.SplashScreenProxy",
-            "pluginId": "cordova-plugin-splashscreen",
-            "merges": [
-                ""
-            ]
-        },
-        {
-            "file": "plugins/cordova-plugin-pushnotification-parsepushnotification/www/parsepushnotification.js",
-            "id": "cordova-plugin-pushnotification-parsepushnotification.parsepushnotification",
-            "pluginId": "cordova-plugin-pushnotification-parsepushnotification",
-            "clobbers": [
-                "window.parsepushnotification"
-            ]
-        }
-    ]
+    "installed_plugins": {},
+    "dependent_plugins": {}
 }
