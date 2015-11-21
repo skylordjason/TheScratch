@@ -39,9 +39,11 @@
 			}
 			return (false);
 		}
+		if (getQueryVariable("id"))
+		{
 		$.ajax({
 			type: "GET",
-			url: "http://www.workmc.net/cdn_btwash/iba_server/newscats.php?id=" + getQueryVariable("id") + "",
+			url: "http://www.workmc.net/cdn_btwash/iba_server/promos.php?id=" + getQueryVariable("id") + "",
 			jsonp: "callback",
 			dataType: "html",
 			crossDomain: true,
@@ -69,6 +71,39 @@
 				});
 			}
 		});
+		}
+		else
+		{
+		$.ajax({
+			type: "GET",
+			url: "http://www.workmc.net/cdn_btwash/iba_server/promos.php",
+			jsonp: "callback",
+			dataType: "html",
+			crossDomain: true,
+			beforeSend: function() {
+				$(".loading_spinner_all").show();
+			},
+			success: function(data) {
+
+				$(".loading_spinner_all").hide();
+
+				$('#js_all').html(data);
+
+			},
+			error: function() {
+				var changeIt = document.getElementById('body');
+				changeIt.style.display = 'none';
+				var changeIt2 = document.getElementById('error');
+				changeIt2.style.display = 'inline';
+				$(".loading_spinner_all").hide();
+				$('body').toast({
+					content: '<a data-dismiss="toast">Dismiss</a><div class="toast-text">Something went wrong.</div>',
+					show: function() {
+						toastText++;
+					}
+				});
+			}
+		});}
 	</script>
 	<div class="content">
 		<div class="loading_spinner_all">

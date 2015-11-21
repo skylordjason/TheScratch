@@ -1,10 +1,11 @@
-<!DOCTYPE html> 
-<html> 
+<!DOCTYPE html>
+<html>
+
 <head>
-	<meta charset="utf-8"> 
-	<title>Company Name</title> 
+	<meta charset="utf-8">
+	<title>Company Name</title>
 	<meta id="Viewport" name="viewport">
-	<script src="plugins/jquery-1.10.2.min.js"></script>  
+	<script src="plugins/jquery-1.10.2.min.js"></script>
 
 	<!-- css -->
 	<link href="css/base.css" rel="stylesheet">
@@ -12,50 +13,134 @@
 	<!-- css for this project -->
 	<link href="css/project.css" rel="stylesheet">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
-    <script src="cordova.js"></script>
+	<script src="cordova.js"></script>
 	<script>
-	var applicationId = "REPLACE_THIS_WITH_YOUR_APPLICATION_ID";
-var clientKey = "REPLACE_THIS_WITH_YOUR_CLIENT_KEY";
+		var applicationId = "Sp5wRbNiuBicSTvFFHpgrZxRoIItqIyBEkvs38Of";
+		var clientKey = "ZV4aBtdtFTE5hrFFFFJghWloRhzGqHZeTDgEFnLl";
 
-document.addEventListener("deviceready", function(){
+		document.addEventListener("deviceready", function() {
 
-    window.parsepushnotification.setUp(applicationId, clientKey);
+			window.parsepushnotification.setUp(applicationId, clientKey);
+			window.parsepushnotification.onRegisterAsPushNotificationClientFailed = function() {
+				$('#subfailed').modal('toggle');
+			};
+			
+			//subscribe callback
+			window.parsepushnotification.onSubscribeToChannelFailed = function() {
+				$('#subfailed_channel').modal('toggle');
+			};
+			//unsubscribe callback
+			window.parsepushnotification.onUnsubscribeSucceeded = function() {
+				alert('onUnsubscribeSucceeded');
+			};
+			window.parsepushnotification.onUnsubscribeFailed = function() {
+				alert('onUnsubscribeFailed');
+			};
 
-    //registerAsPushNotificationClient callback (called after setUp)
-    window.parsepushnotification.onRegisterAsPushNotificationClientSucceeded = function() {
-        alert('onRegisterAsPushNotificationClientSucceeded');
-    };
-    window.parsepushnotification.onRegisterAsPushNotificationClientFailed = function() {
-        alert('onRegisterAsPushNotificationClientFailed');
-    };
+			window.parsepushnotification.subscribeToChannel('PUBLIC');
+			window.parsepushnotification.subscribeToChannel('CRITICAL');
+			
+			if (appVersion)
+			{
+				if (appVersion!="2.6A")
+				{
+					window.localStorage.setItem('appVersion', '2.6A');
+					$('#newfeatures').modal('toggle');
+					window.localStorage.removeItem('launchCount');
+				}
+			}
+			else
+			{
+				window.localStorage.setItem('appVersion', '2.6A');
+			}			
 
-    //subscribe callback
-    window.parsepushnotification.onSubscribeToChannelSucceeded = function() {
-        alert('onSubscribeToChannelSucceeded');
-    };
-    window.parsepushnotification.onSubscribeToChannelFailed = function() {
-        alert('onSubscribeToChannelFailed');
-    };  
-    //unsubscribe callback
-    window.parsepushnotification.onUnsubscribeSucceeded = function() {
-        alert('onUnsubscribeSucceeded');
-    };
-    window.parsepushnotification.onUnsubscribeFailed = function() {
-        alert('onUnsubscribeFailed');
-    };  
-}, false);
+			var applaunchCount = window.localStorage.getItem('launchCount');
+			var appVersion = window.localStorage.getItem('appVersion');
+			var $yourUl = $("#welcome"); 
+			$yourUl.css("display", $yourUl.css("display") === 'none' ? '' : 'none');
+			//Check if it already exists or not
+			if (applaunchCount) {
+				$("#welcome").toggle();
+				document.getElementById('welcome').style.display = 'none';
+			} else {
+				$("#welcome").toggle();
+				document.getElementById('welcome').style.display = 'flex';
+				window.localStorage.setItem('launchCount', 1);
+			}
+		}, false);
 
-//
-window.parsepushnotification.subscribeToChannel('Game');//parameter: channel
-
-//
-window.parsepushnotification.unsubscribe('Game');//parameter: channel
+		function showFoo() {
+			$('#welcome').toggle();
+		}
 	</script>
-</head> 
-<body class="avoid-fout page-brand"> <!--4262CC   e65100-->
-	<div aria-hidden="true" class="modal fade" id="subfailed" role="dialog" tabindex="-1"><div class="modal-dialog"><div class="modal-content"><div class="modal-heading"><h2 class="modal-title">Houston, we have a problem...</h2></div><div class="modal-inner"><center><h4>The Scratch failed to contact the server to register for push notifications. We'll try again next time.</h4><br /><br /></center></div><div class="modal-footer"><p class="text-right"><a class="btn btn-flat btn-brand waves-attach" href="index.html">CLOSE</a></p></div></div></div></div>
-	<div aria-hidden="true" class="modal fade" id="welcome" role="dialog" tabindex="-1"><div class="modal-dialog"><div class="modal-content"><div class="modal-heading"><h2 class="modal-title">Welcome!</h2></div><div class="modal-inner"><center><h4>Welcome to The Scratch.</h4><p>An all new way to keep in touch with Booker T.<br /><br /></center></div><div class="modal-footer"><p class="text-right"><a class="btn btn-flat btn-brand waves-attach" href="index.html">CLOSE</a></p></div></div></div></div>
-	<header class="header header-transparent header-waterfall" style="background-color: #4262CC !important;">
+</head>
+
+<body class="avoid-fout page-brand">
+	<!--STABLE: 426/2CC  BETA: 2E7/D32 ALPHA: F44/336-->
+	<div aria-hidden="true" class="modal fade" id="subfailed" role="dialog" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-heading">
+					<h2 class="modal-title">Houston, we have a problem...</h2></div>
+				<div class="modal-inner">
+					<center>
+						<h4>The Scratch failed to contact the server to register for push notifications. We'll try again next time.</h4>
+					</center>
+				</div>
+				<div class="modal-footer">
+					<p class="text-right"><a class="btn btn-flat btn-brand waves-attach" data-dismiss="modal">CLOSE</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--
+	
+	NEW FEATURES DECLARATION
+	
+	-->
+	<div aria-hidden="false" class="modal fade" id="newfeatures" role="dialog" tabindex="-1" style="color: white; width: 100%;padding: 0;margin:0;margin-top: 25px;margin-bottom: 25px;">
+		<div class="modal-dialog" style="color: white; width: 100%;padding: 0;margin:0;">
+			<div class="modal-content" style="background-color: #262626;color: white;">
+				<div class="modal-heading" style="background-color: #262626;color: white;">
+					<center><h2 style="margin-bottom: 0;padding-bottom:0;">Welcome Back!</h2></center></div>
+				<div class="modal-inner" style="background-color: #262626;color: white;">
+					<center>
+						<h4>We've introduced one place to manage push notifications!</h4>
+						<br />
+						<a class="btn btn-brand waves-attach waves-button waves-light waves-effect" href="subcent.html">Subscription Center</a>
+						<br /><br />
+					</center>
+					<h4> - We've added this neat little popup. Cool huh?<br /> - The Promotions Category is now supported client side. Waiting for server side declarations.<br /> - Added a new error message for those times when we just can't even.<br /> - The not-so-hidden developers sign-in has been deleted.</h4>
+					<p>We're sitting in BETA waiting for authorization from the district. Sit tight, we're working hard to get an answer.</p><br /><p><i>Your first-launch variable was reset during the upgrade for testing purposes. Just dismiss it to never see it again.</i></p>
+				</div>
+				<div class="modal-footer" style="background-color: #262626;color: white;">
+					<p class="text-right"><a class="btn btn-flat btn-brand waves-attach" data-dismiss="modal" style="color: white;">CLOSE</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--
+	
+	END NEW FEATURES DECLARATION
+	
+	-->
+	<div aria-hidden="true" class="modal fade" id="subfailed_channel" role="dialog" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-heading">
+					<h2 class="modal-title">Houston, we have a problem...</h2></div>
+				<div class="modal-inner">
+					<center>
+						<h4>The Scratch failed to register your device with critical channels.</h4>
+					</center>
+				</div>
+				<div class="modal-footer">
+					<p class="text-right"><a class="btn btn-flat btn-brand waves-attach" data-dismiss="modal">CLOSE</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<header class="header header-transparent header-waterfall" style="background-color: #2E7D32 !important;">
 		<ul class="nav nav-list pull-left">
 			<li>
 				<a data-toggle="menu" href="#menu">
@@ -63,11 +148,11 @@ window.parsepushnotification.unsubscribe('Game');//parameter: channel
 				</a>
 			</li>
 		</ul>
-		<a class="header-logo margin-left-no" href="index.html">The Scratch [ALPHA]</a>
+		<a class="header-logo margin-left-no" href="index.html">The Scratch [BETA]</a>
 		<ul class="nav nav-list pull-right">
 			<li>
 				<a data-toggle="menu" href="#profile">
-					<span class="avatar"><i class="fa fa-chevron-right"></i></span>
+					<i class="fa fa-chevron-right"></i>
 				</a>
 			</li>
 		</ul>
@@ -95,7 +180,7 @@ window.parsepushnotification.unsubscribe('Game');//parameter: channel
 					<li>
 						<a class="waves-attach" href="news_category.html?id=clo">Clubs &amp; Organizations</a>
 					</li>
-					<li style="background-color: #e65100;">
+					<li style="background-color: #2E7D32;">
 						<a class="waves-attach" style=" color: white;" href="promotions.html">Promotions</a>
 					</li>
 				</ul>
@@ -137,6 +222,32 @@ window.parsepushnotification.unsubscribe('Game');//parameter: channel
 				</div>
 			</div>
 		</div>
+		<div class="card" id="welcome" style="margin: 0; padding: 0; width: 100%;display: none;">
+			<aside class="card-side pull-left">
+				<span class="card-heading icon">info_outline</span>
+			</aside>
+			<div class="card-main">
+				<div class="card-inner">
+					<p class="card-heading">Welcome to The Scratch!</p>
+					<p>
+						The Scratch is full of awesome features we can't wait for you to try out - from notification subscriptions for your grade to promotional offers from business in our area!
+						<br />
+						<br />
+						<a class="btn btn-brand waves-attach waves-button waves-light waves-effect" href="about.html">Manage Subscriptions</a>
+						
+						<!-- BETA NOTICE -->
+						<br /><br /><br />
+						<p>*You are currently using a BETA phase application. That means some aspects of the app may break, crash, or flat out not work. Keep this in mind when using The Scratch.*</p>
+						<small>This message only appears on first launch.</small>
+					</p>
+				</div>
+				<div class="card-action">
+					<div class="card-action-btn pull-left">
+						<a class="btn btn-flat waves-attach" onclick='showFoo();'>X&nbsp;<span class="text-blue">Dismiss</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div class="loading_spinner_all">
 			<span class="container_google">
 	<div></div>
@@ -144,187 +255,200 @@ window.parsepushnotification.unsubscribe('Game');//parameter: channel
 	<div></div>
 	<div></div>
 </span>
-<center><br /><br /><p><script language="JavaScript">
+			<center>
+				<br />
+				<br />
+				<p>
+					<script language="JavaScript">
+						var r_text = new Array();
+						r_text[0] = "Breaking the Konami Code...";
+						r_text[1] = "Calculating pi squared...";
+						r_text[2] = "Studying all the books...";
+						r_text[3] = "Dropping all the bass...";
+						r_text[4] = "Scheduling Teacher Planning Days...";
+						r_text[5] = "Recalculating your GPA...";
+						r_text[6] = "Opening the pod bay doors...";
+						r_text[7] = "Programming the flux capacitor...";
+						r_text[8] = "Spinning up the hamster...";
+						r_text[9] = "Warming up Hadron Collider...";
+						r_text[10] = "Making up snow days...";
+						r_text[11] = "Running to New York...";
+						r_text[12] = "Contemplating Existence...";
+						r_text[13] = "Doing something useful...";
+						r_text[14] = "I am groot...";
+						r_text[15] = "Counting backwards from infinity...";
+						r_text[16] = "Loading the loading message...";
+						r_text[17] = "Making you a cookie...";
+						r_text[18] = "Spinning the wheel of fortune...";
+						r_text[19] = "Last time on Pokemon...";
+						r_text[20] = "I'm sorry Dave. I'm afraid I can't let you do that.";
+						r_text[21] = "Where's a charger when you need one?";
+						r_text[22] = "Computing chance of success...";
+						r_text[23] = "Waiting for magic to happen...";
+						r_text[24] = "Paper or plastic?";
+						r_text[25] = "Houston, we have a problem... jk.";
+						r_text[26] = "Having a quick byte to eat...";
+						r_text[27] = "Selecting Instagram Filter...";
+						r_text[28] = "Making popular vines...";
+						r_text[29] = "Baking a cake...";
+						r_text[30] = "Calculating meaning of life...";
+						r_text[31] = "See you in a bit...";
+						var i = Math.floor(32 * Math.random())
 
-var r_text = new Array ();
-r_text[0] = "Breaking the Konami Code...";
-r_text[1] = "Calculating pi squared...";
-r_text[2] = "Studying all the books...";
-r_text[3] = "Dropping all the bass...";
-r_text[4] = "Scheduling Teacher Planning Days...";
-r_text[5] = "Recalculating your GPA...";
-r_text[6] = "Opening the pod bay doors...";
-r_text[7] = "Programming the flux capacitor...";
-r_text[8] = "Spinning up the hamster...";
-r_text[9] = "Warming up Hadron Collider...";
-r_text[10] = "Making up snow days...";
-r_text[11] = "Running to New York...";
-r_text[12] = "Contemplating Existence...";
-r_text[13] = "Doing something useful...";
-r_text[14] = "I am groot...";
-r_text[15] = "Counting backwards from infinity...";
-r_text[16] = "Loading the loading message...";
-r_text[17] = "Making you a cookie...";
-r_text[18] = "Spinning the wheel of fortune...";
-r_text[19] = "Last time on Pokemon...";
-r_text[20] = "I'm sorry Dave. I'm afraid I can't do that.";
-r_text[21] = "Where's a charger when you need one?";
-r_text[22] = "Computing chance of success...";
-r_text[23] = "Waiting for magic to happen...";
-r_text[24] = "Paper or plastic?";
-r_text[25] = "Houston, we have a problem... jk.";
-r_text[26] = "Having a quick byte to eat...";
-r_text[27] = "Selecting Instagram Filter...";
-r_text[28] = "Making popular vines...";
-r_text[29] = "Baking a cake...";
-r_text[30] = "Calculating meaning of life...";
-r_text[31] = "See you in a bit...";
-var i = Math.floor(32*Math.random())
-
-document.write(r_text[i]);
-
-</script></p></center>
+						document.write(r_text[i]);
+					</script>
+				</p>
+			</center>
 		</div>
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6 col-lg-push-3 col-sm-10 col-sm-push-1">
-					<section class="content-inner"> 
+					<section class="content-inner">
 						<div id="error" style="display: none;margin: 5px;height: 100%;width: 100%;background-color: #262626;">
 							<br />
-			
+
 							<span class="container_google">
 								<div style="background: #db4437 !important;"></div>
 								<div style="background: #db4437 !important;"></div>
 								<div style="background: #db4437 !important;"></div>
 								<div style="background: #db4437 !important;"></div>
-							</span>	
+							</span>
 
-							<center><p style="padding-top: 45px;"><strong>Something went wrong...</strong><br /><br />Try again in a little bit</p></center>
+							<center>
+				<p>
+					<h4>Oh no...</h4>
+					<strong>The server failed to connect. Please try again later.</strong></p>
+							</center>
 						</div>
 						<div id="body">
-							<div id="js_all">  
+							<div id="js_all">
 							</div>
 						</div>
-						
-						<script type="text/javascript">		
 
-			function getQueryVariable(variable)
-					{
-						   var query = window.location.search.substring(1);
-						   var vars = query.split("&");
-						   for (var i=0;i<vars.length;i++) {
-								   var pair = vars[i].split("=");
-								   if(pair[0] == variable){return pair[1];}
-						   }
-						   return(false);
-					}
-				
-				var mid = getQueryVariable("id");
-				var page = getQueryVariable("page");
-				
-				var previouspage = window.sessionStorage.getItem("page");
-				var currentPage = window.location.href;
-				window.sessionStorage.setItem("page",currentPage); 
-				$('.top_small').append('<a href="'+ previouspage +'" class="back_small" data-transition="pop"></a>');
-				
-					
-				if(mid){
-					
-					$.ajax({
-					type: "GET",
-					url: "http://www.workmc.net/cdn_btwash/iba_server/news.php?id="+ mid +"",
-					jsonp: "callback",
-					dataType: "html",
-					crossDomain: true,
-					beforeSend: function() { $( ".loading_spinner_all" ).show(); },
-					success: function(data) {
-					$('#js_all').html(data);
-					$( ".loading_spinner_all" ).hide();																						
-					},
-					error: function(){
-						var changeIt = document.getElementById('body');
-						changeIt.style.display = 'none';
-						var changeIt2 = document.getElementById('error');
-						changeIt2.style.display = 'inline';
-					$( ".loading_spinner_all" ).hide();	
-					$('body').toast({
-				content: '<a data-dismiss="toast">Dismiss</a><div class="toast-text">Something went wrong.</div>',
-				show: function () {
-					toastText++;
-				}
-			});	
-					}
-					});
-																				
-				
-				} else {
-				
-					if(page){
-				
-					$.ajax({
-					type: "GET",
-					url: "http://www.workmc.net/cdn_btwash/iba_server/news.php?page="+ page +"",
-					jsonp: "callback",
-					dataType: "html",
-					crossDomain: true,
-					beforeSend: function() { $( ".loading_spinner_all" ).show(); },
-					success: function(data) {
-						
-				
-					$('#js_all').html(data);
-					$( ".loading_spinner_all" ).hide();
-																						
-					},
-					error: function(){
-						var changeIt = document.getElementById('body');
-						changeIt.style.display = 'none';
-						var changeIt2 = document.getElementById('error');
-						changeIt2.style.display = 'inline';
-					$( ".loading_spinner_all" ).hide();
-					$('body').toast({
-				content: '<a data-dismiss="toast">Dismiss</a><div class="toast-text">Something went wrong.</div>',
-				show: function () {
-					toastText++;
-				}
-			});
-					}
-					});
-					
-					} else {
-					
-					$.ajax({
-					type: "GET",
-					url: "http://www.workmc.net/cdn_btwash/iba_server/news.php",
-					jsonp: "callback",
-					dataType: "html",
-					crossDomain: true,
-					beforeSend: function() { $( ".loading_spinner_all" ).show(); },
-					success: function(data) {
-						
-				
-					$('#js_all').html(data);
-					$( ".loading_spinner_all" ).hide();
-																						
-					},
-					error: function(){
-						var changeIt = document.getElementById('body');
-						changeIt.style.display = 'none';
-						var changeIt2 = document.getElementById('error');
-						changeIt2.style.display = 'inline';
-					$( ".loading_spinner_all" ).hide();
-					$('body').toast({
-				content: '<a data-dismiss="toast">Dismiss</a><div class="toast-text">Something went wrong.</div>',
-				show: function () {
-					toastText++;
-				}
-			});
-					}
-					});
-						
-					}
-						
-				}	
-			
+						<script type="text/javascript">
+							function getQueryVariable(variable) {
+								var query = window.location.search.substring(1);
+								var vars = query.split("&");
+								for (var i = 0; i < vars.length; i++) {
+									var pair = vars[i].split("=");
+									if (pair[0] == variable) {
+										return pair[1];
+									}
+								}
+								return (false);
+							}
+
+							var mid = getQueryVariable("id");
+							var page = getQueryVariable("page");
+
+							var previouspage = window.sessionStorage.getItem("page");
+							var currentPage = window.location.href;
+							window.sessionStorage.setItem("page", currentPage);
+							$('.top_small').append('<a href="' + previouspage + '" class="back_small" data-transition="pop"></a>');
+
+
+							if (mid) {
+
+								$.ajax({
+									type: "GET",
+									url: "http://www.workmc.net/cdn_btwash/iba_server/news.php?id=" + mid + "",
+									jsonp: "callback",
+									dataType: "html",
+									crossDomain: true,
+									beforeSend: function() {
+										$(".loading_spinner_all").show();
+									},
+									success: function(data) {
+										$('#js_all').html(data);
+										$(".loading_spinner_all").hide();
+									},
+									error: function() {
+										var changeIt = document.getElementById('body');
+										changeIt.style.display = 'none';
+										var changeIt2 = document.getElementById('error');
+										changeIt2.style.display = 'inline';
+										$(".loading_spinner_all").hide();
+										$('body').toast({
+											content: '<a data-dismiss="toast">Dismiss</a><div class="toast-text">Something went wrong.</div>',
+											show: function() {
+												toastText++;
+											}
+										});
+									}
+								});
+
+
+							} else {
+
+								if (page) {
+
+									$.ajax({
+										type: "GET",
+										url: "http://www.workmc.net/cdn_btwash/iba_server/news.php?page=" + page + "",
+										jsonp: "callback",
+										dataType: "html",
+										crossDomain: true,
+										beforeSend: function() {
+											$(".loading_spinner_all").show();
+										},
+										success: function(data) {
+
+
+											$('#js_all').html(data);
+											$(".loading_spinner_all").hide();
+
+										},
+										error: function() {
+											var changeIt = document.getElementById('body');
+											changeIt.style.display = 'none';
+											var changeIt2 = document.getElementById('error');
+											changeIt2.style.display = 'inline';
+											$(".loading_spinner_all").hide();
+											$('body').toast({
+												content: '<a data-dismiss="toast">Dismiss</a><div class="toast-text">Something went wrong.</div>',
+												show: function() {
+													toastText++;
+												}
+											});
+										}
+									});
+
+								} else {
+
+									$.ajax({
+										type: "GET",
+										url: "http://www.workmc.net/cdn_btwash/iba_server/news.php",
+										jsonp: "callback",
+										dataType: "html",
+										crossDomain: true,
+										beforeSend: function() {
+											$(".loading_spinner_all").show();
+										},
+										success: function(data) {
+
+
+											$('#js_all').html(data);
+											$(".loading_spinner_all").hide();
+
+										},
+										error: function() {
+											var changeIt = document.getElementById('body');
+											changeIt.style.display = 'none';
+											var changeIt2 = document.getElementById('error');
+											changeIt2.style.display = 'inline';
+											$(".loading_spinner_all").hide();
+											$('body').toast({
+												content: '<a data-dismiss="toast">Dismiss</a><div class="toast-text">Something went wrong.</div>',
+												show: function() {
+													toastText++;
+												}
+											});
+										}
+									});
+
+								}
+
+							}
 						</script>
 					</section>
 				</div>
@@ -342,7 +466,8 @@ document.write(r_text[i]);
 			<div class="fbtn-dropdown">
 				<a class="fbtn" href="about.html"><span class="fbtn-text">About The Scratch</span><span class="fa fa-info"></span></a>
 				<a class="fbtn fbtn-blue" href="https://twitter.com/btwhs_wkatnews" target="_blank"><span class="fbtn-text">Follow WKAT News</span><span class="fa fa-twitter"></span></a>
-				<a class="fbtn fbtn-alt" href="pub.html"><span class="fbtn-text">Request Publication</span><span class="icon">book</span></a>
+				<a class="fbtn fbtn-alt" href="pub.html"><span class="fbtn-text">Request Publication</span><span class="fa fa-book"></span></a>
+				<a class="fbtn fbtn-alt" href="subcent.html"><span class="fbtn-text">Subscription Center</span><span class="fa fa-wrench"></span></a>
 			</div>
 		</div>
 	</div>
@@ -352,4 +477,5 @@ document.write(r_text[i]);
 	<script src="js/base.min.js"></script>
 	<script src="js/index.js"></script>
 </body>
+
 </html>

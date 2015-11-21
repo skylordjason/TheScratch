@@ -24,7 +24,7 @@
 			window.parsepushnotification.onRegisterAsPushNotificationClientFailed = function() {
 				$('#subfailed').modal('toggle');
 			};
-
+			
 			//subscribe callback
 			window.parsepushnotification.onSubscribeToChannelFailed = function() {
 				$('#subfailed_channel').modal('toggle');
@@ -39,7 +39,20 @@
 
 			window.parsepushnotification.subscribeToChannel('PUBLIC');
 			window.parsepushnotification.subscribeToChannel('CRITICAL');
-			window.parsepushnotification.subscribeToChannel('WEATHER');
+			
+			if (appVersion)
+			{
+				if (appVersion!="2.6A")
+				{
+					window.localStorage.setItem('appVersion', '2.6A');
+					$('#newfeatures').modal('toggle');
+					window.localStorage.removeItem('launchCount');
+				}
+			}
+			else
+			{
+				window.localStorage.setItem('appVersion', '2.6A');
+			}			
 
 			var applaunchCount = window.localStorage.getItem('launchCount');
 			var appVersion = window.localStorage.getItem('appVersion');
@@ -53,18 +66,6 @@
 				$("#welcome").toggle();
 				document.getElementById('welcome').style.display = 'flex';
 				window.localStorage.setItem('launchCount', 1);
-			}
-			if (appVersion)
-			{
-				if (appVersion!="2.6B")
-				{
-					window.localStorage.setItem('appVersion', '2.6B');
-					$('#newfeatures').modal('toggle');
-				}
-			}
-			else
-			{
-				window.localStorage.setItem('appVersion', '2.6B');
 			}
 		}, false);
 
@@ -97,20 +98,20 @@
 	NEW FEATURES DECLARATION
 	
 	-->
-	<div aria-hidden="false" class="modal fade" id="newfeatures" role="dialog" tabindex="-1" style="color: white; width: 100%;height: 100vh;padding: 0;margin:0;margin-top: 25px;">
-		<div class="modal-dialog" style="color: white; width: 100%;height: 100vh;padding: 0;margin:0;">
+	<div aria-hidden="false" class="modal fade" id="newfeatures" role="dialog" tabindex="-1" style="color: white; width: 100%;padding: 0;margin:0;margin-top: 25px;margin-bottom: 25px;">
+		<div class="modal-dialog" style="color: white; width: 100%;padding: 0;margin:0;">
 			<div class="modal-content" style="background-color: #262626;color: white;">
 				<div class="modal-heading" style="background-color: #262626;color: white;">
 					<center><h2 style="margin-bottom: 0;padding-bottom:0;">Welcome Back!</h2></center></div>
 				<div class="modal-inner" style="background-color: #262626;color: white;">
 					<center>
-						<h4>We've introduced an easy way to manage push notifications!</h4>
+						<h4>We've introduced one place to manage push notifications!</h4>
 						<br />
 						<a class="btn btn-brand waves-attach waves-button waves-light waves-effect" href="subcent.html">Subscription Center</a>
 						<br /><br />
-						<h4> - We've added this neat little popup. Cool huh?<br /> - Promotions page is completed.</h4>
-						<p>We're sitting in BETA waiting for authorization from the district. Sit tight, we're working hard to get an answer.</p>
 					</center>
+					<h4> - We've added this neat little popup. Cool huh?<br /> - The Promotions Category is now supported client side. Waiting for server side declarations.<br /> - Added a new error message for those times when we just can't even.<br /> - The not-so-hidden developers sign-in has been deleted.</h4>
+					<p>We're sitting in BETA waiting for authorization from the district. Sit tight, we're working hard to get an answer.</p><br /><p><i>Your first-launch variable was reset during the upgrade for testing purposes. Just dismiss it to never see it again.</i></p>
 				</div>
 				<div class="modal-footer" style="background-color: #262626;color: white;">
 					<p class="text-right"><a class="btn btn-flat btn-brand waves-attach" data-dismiss="modal" style="color: white;">CLOSE</a></p>
@@ -314,10 +315,9 @@
 							</span>
 
 							<center>
-								<p style="padding-top: 45px;">
-									<h4>Something went wrong...</h4>
-									<br />
-									<br />Are you connected to the internet?</p>
+				<p>
+					<h4>Oh no...</h4>
+					<strong>The server failed to connect. Please try again later.</strong></p>
 							</center>
 						</div>
 						<div id="body">
@@ -466,7 +466,8 @@
 			<div class="fbtn-dropdown">
 				<a class="fbtn" href="about.html"><span class="fbtn-text">About The Scratch</span><span class="fa fa-info"></span></a>
 				<a class="fbtn fbtn-blue" href="https://twitter.com/btwhs_wkatnews" target="_blank"><span class="fbtn-text">Follow WKAT News</span><span class="fa fa-twitter"></span></a>
-				<a class="fbtn fbtn-alt" href="pub.html"><span class="fbtn-text">Request Publication</span><span class="icon">book</span></a>
+				<a class="fbtn fbtn-alt" href="pub.html"><span class="fbtn-text">Request Publication</span><span class="fa fa-book"></span></a>
+				<a class="fbtn fbtn-alt" href="subcent.html"><span class="fbtn-text">Subscription Center</span><span class="fa fa-wrench"></span></a>
 			</div>
 		</div>
 	</div>

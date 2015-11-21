@@ -1,91 +1,76 @@
-<!DOCTYPE html> 
-<html> 
-<head>
-	<meta charset="utf-8"> 
-	<title>Company Name</title> 
-	<meta id="Viewport" name="viewport">     
-	<script src="plugins/jquery-1.10.2.min.js"></script>  
+<!DOCTYPE html>
+<html>
 
+<head>
+	<meta charset="utf-8">
+	<title>Company Name</title>
+	<meta id="Viewport" name="viewport">
+	<script src="plugins/jquery-1.10.2.min.js"></script>
 	<!-- css -->
 	<link href="css/base.css" rel="stylesheet">
 
 	<!-- css for this project -->
 	<link href="css/project.css" rel="stylesheet">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
-	
-    <script src="cordova.js"></script>
-</head> 
+
+	<script src="cordova.js"></script>
+</head>
+
 <body class="avoid-fout page-brand">
-	<header class="header header-transparent header-waterfall" style="background-color: #4262CC !important;">
+	<header class="header header-transparent header-waterfall" style="background-color: #2E7D32 !important;">
 		<ul class="nav nav-list pull-left">
 			<li>
-				<a data-toggle="menu" href="#menu">
-					<span class="icon icon-lg">menu</span>
+				<a href="index.html">
+					<i class="fa fa-chevron-left"></i>
 				</a>
 			</li>
 		</ul>
-		<a class="header-logo margin-left-no" href="index.html">The Scratch</a>
-		<ul class="nav nav-list pull-right">
-			<li>
-				<a data-toggle="menu" href="#profile">
-					<span class="avatar"><i class="fa fa-chevron-right"></i></span>
-				</a>
-			</li>
-		</ul>
+		<a class="header-logo margin-left-no" href="index.html">The Scratch [BETA]</a>
 	</header>
-	<nav aria-hidden="true" class="menu" id="menu" tabindex="-1" style="-webkit-transform: translateZ(0)">
-		<div class="menu-scroll">
-			<div class="menu-content">
-				<a class="menu-logo" href="index.html">The Scratch</a>
-				<ul class="nav">
-					<li>
-						<a class="waves-attach" href="news_category.html?id=important">Important News</a>
-					</li>
-					<li>
-						<a class="waves-attach" href="news_category.html?id=testing">Testing Info</a>
-					</li>
-					<li>
-						<a class="waves-attach" href="news_category.html?id=sports">Sports</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-	<nav aria-hidden="true" class="menu menu-right" id="profile" tabindex="-1">
-		<div class="menu-scroll">
-			<div class="menu-top">
-				<div class="menu-top-img">
-					<img alt="John Smith" src="images/samples/landscape.jpg">
-				</div>
-				<div class="menu-top-info">
-					<a class="menu-top-user" href="javascript:void(0)">Development Corner</a>
-				</div>
-				<div class="menu-top-info-sub">
-					<small>No Developer is Logged in.</small>
-				</div>
-			</div>
-			<div class="menu-content">
-				<ul class="nav">
-					<li>
-						<a class="waves-attach" href="login.html"><span class="icon icon-lg">exit_to_app</span>Login</a>
-					</li>
-				</ul>
-				<p style="padding: 5px;">
-					This menu is for development purposes only. To login to the Development Portal, click the "Login" button above this text.
-				</p>
-			</div>
-		</div>
-	</nav>
+	<script type="text/javascript">
+		function getQueryVariable(variable) {
+			var query = window.location.search.substring(1);
+			var vars = query.split("&");
+			for (var i = 0; i < vars.length; i++) {
+				var pair = vars[i].split("=");
+				if (pair[0] == variable) {
+					return pair[1];
+				}
+			}
+			return (false);
+		}
+		$.ajax({
+			type: "GET",
+			url: "http://www.workmc.net/cdn_btwash/iba_server/newscats.php?id=" + getQueryVariable("id") + "",
+			jsonp: "callback",
+			dataType: "html",
+			crossDomain: true,
+			beforeSend: function() {
+				$(".loading_spinner_all").show();
+			},
+			success: function(data) {
+
+				$(".loading_spinner_all").hide();
+
+				$('#js_all').html(data);
+
+			},
+			error: function() {
+				var changeIt = document.getElementById('body');
+				changeIt.style.display = 'none';
+				var changeIt2 = document.getElementById('error');
+				changeIt2.style.display = 'inline';
+				$(".loading_spinner_all").hide();
+				$('body').toast({
+					content: '<a data-dismiss="toast">Dismiss</a><div class="toast-text">Something went wrong.</div>',
+					show: function() {
+						toastText++;
+					}
+				});
+			}
+		});
+	</script>
 	<div class="content">
-		<div class="content-heading">
-			<div class="container">
-				<div class="row" style="background-color: #4262CC !important;">
-					<div class="col-lg-6 col-lg-push-3 col-sm-10 col-sm-push-1" style="background-color: #4262CC !important;">
-						<h1 class="heading" style="background-color: #4262CC !important;">Latest News</h1>
-					</div>
-				</div>
-			</div>
-		</div>
 		<div class="loading_spinner_all">
 			<span class="container_google">
 	<div></div>
@@ -93,190 +78,73 @@
 	<div></div>
 	<div></div>
 </span>
-<center><br /><br /><p><script language="JavaScript">
+			<center>
+				<br />
+				<br />
+				<p>
+					<script language="JavaScript">
+						var r_text = new Array();
+						r_text[0] = "Breaking the Konami Code...";
+						r_text[1] = "Calculating pi squared...";
+						r_text[2] = "Studying all the books...";
+						r_text[3] = "Dropping all the bass...";
+						r_text[4] = "Scheduling Teacher Planning Days...";
+						r_text[5] = "Recalculating your GPA...";
+						r_text[6] = "Opening the pod bay doors...";
+						r_text[7] = "Programming the flux capacitor...";
+						r_text[8] = "Spinning up the hamster...";
+						r_text[9] = "Warming up Hadron Collider...";
+						r_text[10] = "Making up snow days...";
+						r_text[11] = "Running to New York...";
+						r_text[12] = "Contemplating Existence...";
+						r_text[13] = "Doing something useful...";
+						r_text[14] = "I am groot...";
+						r_text[15] = "Counting backwards from infinity...";
+						r_text[16] = "Loading the loading message...";
+						r_text[17] = "Making you a cookie...";
+						r_text[18] = "Spinning the wheel of fortune...";
+						r_text[19] = "Last time on Pokemon...";
+						r_text[20] = "I'm sorry Dave. I'm afraid I can't let you do that.";
+						r_text[21] = "Where's a charger when you need one?";
+						r_text[22] = "Computing chance of success...";
+						r_text[23] = "Waiting for magic to happen...";
+						r_text[24] = "Paper or plastic?";
+						r_text[25] = "Houston, we have a problem... jk.";
+						r_text[26] = "Having a quick byte to eat...";
+						r_text[27] = "Selecting Instagram Filter...";
+						r_text[28] = "Making popular vines...";
+						r_text[29] = "Baking a cake...";
+						r_text[30] = "Calculating meaning of life...";
+						r_text[31] = "See you in a bit...";
+						var i = Math.floor(32 * Math.random())
 
-var r_text = new Array ();
-r_text[0] = "Breaking the Konami Code...";
-r_text[1] = "Calculating pi squared...";
-r_text[2] = "Studying all the books...";
-r_text[3] = "Dropping all the bass...";
-r_text[4] = "Scheduling Teacher Planning Days...";
-r_text[5] = "Recalculating your GPA...";
-r_text[6] = "Opening the pod bay doors...";
-r_text[7] = "Programming the flux capacitor...";
-r_text[8] = "Spinning up the hamster...";
-r_text[9] = "Warming up Hadron Collider...";
-r_text[10] = "Making up snow days...";
-r_text[11] = "Running to New York...";
-r_text[12] = "Contemplating Existence...";
-r_text[13] = "Doing something useful...";
-r_text[14] = "I am groot...";
-r_text[15] = "Counting backwards from infinity...";
-r_text[16] = "Loading the loading message...";
-r_text[17] = "Making you a cookie...";
-r_text[18] = "Spinning the wheel of fortune...";
-r_text[19] = "Last time on Pokemon...";
-r_text[20] = "I'm sorry Dave. I'm afraid I can't do that.";
-r_text[21] = "Where's a charger when you need one?";
-r_text[22] = "Computing chance of success...";
-r_text[23] = "Waiting for magic to happen...";
-r_text[24] = "Paper or plastic?";
-r_text[25] = "Houston, we have a problem... jk.";
-r_text[26] = "Having a quick byte to eat...";
-r_text[27] = "Selecting Instagram Filter...";
-r_text[28] = "Making popular vines...";
-r_text[29] = "Baking a cake...";
-r_text[30] = "Calculating meaning of life...";
-r_text[31] = "See you in a bit...";
-var i = Math.floor(32*Math.random())
-
-document.write(r_text[i]);
-
-</script></p></center>
+						document.write(r_text[i]);
+					</script>
+				</p>
+			</center>
 		</div>
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-6 col-lg-push-3 col-sm-10 col-sm-push-1">
-					<section class="content-inner"> 
-	<div id="error" style="display: none;margin: 5px;height: 100%;width: 100%;background-color: #262626;">
-		<br />
-		
-			<span class="container_google">
-	<div style="background: #db4437 !important;"></div>
-	<div style="background: #db4437 !important;"></div>
-	<div style="background: #db4437 !important;"></div>
-	<div style="background: #db4437 !important;"></div>
-</span>
-<center><p style="padding-top: 45px;"><strong>Something went wrong...</strong><br /><br />Try again in a little bit</p></center>
-	</div>
-<div id="body">
-					<div id="js_all">  
-					</div> 
-
-				</div>
-						        <script type="text/javascript">		
-
-			function getQueryVariable(variable)
-					{
-						   var query = window.location.search.substring(1);
-						   var vars = query.split("&");
-						   for (var i=0;i<vars.length;i++) {
-								   var pair = vars[i].split("=");
-								   if(pair[0] == variable){return pair[1];}
-						   }
-						   return(false);
-					}
-				
-				var mid = getQueryVariable("id");
-				var page = getQueryVariable("page");
-				
-				var previouspage = window.sessionStorage.getItem("page");
-				var currentPage = window.location.href;
-				window.sessionStorage.setItem("page",currentPage); 
-				$('.top_small').append('<a href="'+ previouspage +'" class="back_small" data-transition="pop"></a>');
-				
-					
-				if(mid){
-					
-					$.ajax({
-					type: "GET",
-					url: "http://www.workmc.net/cdn_btwash/iba_server/news.php?id="+ mid +"",
-					jsonp: "callback",
-					dataType: "html",
-					crossDomain: true,
-					beforeSend: function() { $( ".loading_spinner_all" ).show(); },
-					success: function(data) {
-					$('#js_all').html(data);
-					$( ".loading_spinner_all" ).hide();																						
-					},
-					error: function(){
-						var changeIt = document.getElementById('body');
-						changeIt.style.display = 'none';
-						var changeIt2 = document.getElementById('error');
-						changeIt2.style.display = 'inline';
-					$( ".loading_spinner_all" ).hide();	
-					$('body').toast({
-				content: '<a data-dismiss="toast">Dismiss</a><div class="toast-text">Something went wrong.</div>',
-				show: function () {
-					toastText++;
-				}
-			});	
-					}
-					});
-																				
-				
-				} else {
-				
-					if(page){
-				
-					$.ajax({
-					type: "GET",
-					url: "http://www.workmc.net/cdn_btwash/iba_server/news.php?page="+ page +"",
-					jsonp: "callback",
-					dataType: "html",
-					crossDomain: true,
-					beforeSend: function() { $( ".loading_spinner_all" ).show(); },
-					success: function(data) {
-						
-				
-					$('#js_all').html(data);
-					$( ".loading_spinner_all" ).hide();
-																						
-					},
-					error: function(){
-						var changeIt = document.getElementById('body');
-						changeIt.style.display = 'none';
-						var changeIt2 = document.getElementById('error');
-						changeIt2.style.display = 'inline';
-					$( ".loading_spinner_all" ).hide();
-					$('body').toast({
-				content: '<a data-dismiss="toast">Dismiss</a><div class="toast-text">Something went wrong.</div>',
-				show: function () {
-					toastText++;
-				}
-			});
-					}
-					});
-					
-					} else {
-					
-					$.ajax({
-					type: "GET",
-					url: "http://www.workmc.net/cdn_btwash/iba_server/news.php",
-					jsonp: "callback",
-					dataType: "html",
-					crossDomain: true,
-					beforeSend: function() { $( ".loading_spinner_all" ).show(); },
-					success: function(data) {
-						
-				
-					$('#js_all').html(data);
-					$( ".loading_spinner_all" ).hide();
-																						
-					},
-					error: function(){
-						var changeIt = document.getElementById('body');
-						changeIt.style.display = 'none';
-						var changeIt2 = document.getElementById('error');
-						changeIt2.style.display = 'inline';
-					$( ".loading_spinner_all" ).hide();
-					$('body').toast({
-				content: '<a data-dismiss="toast">Dismiss</a><div class="toast-text">Something went wrong.</div>',
-				show: function () {
-					toastText++;
-				}
-			});
-					}
-					});
-						
-					}
-						
-				}	
-			
-		</script>
-					</section>
-				</div>
+		<div id="body">
+			<div id="js_all">
 			</div>
+		</div>
+		<div id="error" style="display: none;margin: 5px;height: 100%;width: 100%;background-color: #262626;">
+			<br />
+			<br />
+			<br />
+			<br />
+
+			<!--<span class="container_google">
+	<div style="background: #db4437 !important;"></div>
+	<div style="background: #db4437 !important;"></div>
+	<div style="background: #db4437 !important;"></div>
+	<div style="background: #db4437 !important;"></div>
+</span>-->
+			<center>
+			<img src="images/problem.png" style="width: 100%;">
+				<p>
+					<h4 style="padding: 0;margin: 0;">That should be there... but it isn't.</h4>
+					<strong>Check your internet connection and try again later.</strong></p>
+			</center>
 		</div>
 	</div>
 	<footer class="footer">
@@ -284,19 +152,9 @@ document.write(r_text[i]);
 			<p>Ventrux Development</p>
 		</div>
 	</footer>
-	<div class="fbtn-container">
-		<div class="fbtn-inner">
-			<a class="fbtn fbtn-brand-accent fbtn-lg" data-toggle="dropdown"><span class="fbtn-text">Links</span><span class="fbtn-ori icon">add</span><span class="fbtn-sub icon">close</span></a>
-			<div class="fbtn-dropdown">
-				<a class="fbtn" href="about.html"><span class="fbtn-text">About The Scratch</span><span class="fa fa-info"></span></a>
-				<a class="fbtn fbtn-blue" href="https://twitter.com/btwhs_wkatnews" target="_blank"><span class="fbtn-text">Follow WKAT News</span><span class="fa fa-twitter"></span></a>
-				<a class="fbtn fbtn-alt" href="pub.html"><span class="fbtn-text">Request Publication</span><span class="icon">book</span></a>
-			</div>
-		</div>
-	</div>
-
 	<!-- js -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="js/base.min.js"></script>
 </body>
+
 </html>
