@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.ventrux.thescratchbtw" version="2.2" versionCode="5" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.ventrux.thescratchbtw" version="2.5" versionCode="8" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <feature name="ParsePushNotificationPlugin">
+        <param name="wp-package" value="ParsePushNotificationPlugin" />
+    </feature>
     <feature name="SplashScreen">
         <param name="wp-package" value="SplashScreen" />
         <param name="onload" value="true" />
-    </feature>
-    <feature name="ParsePushNotificationPlugin">
-        <param name="wp-package" value="ParsePushNotificationPlugin" />
     </feature>
     <name>The Scratch</name>
     <description>
@@ -46,7 +46,7 @@
     <preference name="android-installLocation" value="auto" />
     <preference name="SplashScreenDelay" value="3000" />
     <preference name="ErrorUrl" value="error.html" />
-    <preference name="BackgroundColor" value="0x000000" />
+    <preference name="BackgroundColor" value="0xF65100" />
     <preference name="KeepRunning" value="false" />
     <preference name="DisallowOverscroll" value="false" />
     <preference name="LoadUrlTimeoutValue" value="20000" />

@@ -218,12 +218,6 @@
         </PostBuildEvent>
     </PropertyGroup>
     <ItemGroup>
-        <Compile Include="Plugins\cordova-plugin-splashscreen\SplashScreen.cs" />
-    </ItemGroup>
-    <ItemGroup>
-        <Compile Include="Plugins\cordova-plugin-splashscreen\ResolutionHelper.cs" />
-    </ItemGroup>
-    <ItemGroup>
         <Compile Include="Plugins\cordova-plugin-pushnotification-parsepushnotification\ParsePushNotificationPlugin.cs" />
     </ItemGroup>
     <ItemGroup>
@@ -235,5 +229,11 @@
         <Reference Include="Parse.Phone">
             <HintPath>plugins\cordova-plugin-pushnotification-parsepushnotification\Parse.Phone.dll</HintPath>
         </Reference>
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Plugins\cordova-plugin-splashscreen\SplashScreen.cs" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Plugins\cordova-plugin-splashscreen\ResolutionHelper.cs" />
     </ItemGroup>
 </Project>

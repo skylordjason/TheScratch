@@ -9,50 +9,45 @@
                 "parents": {
                     "/*": [
                         {
-                            "xml": "<feature name=\"SplashScreen\"><param name=\"ios-package\" value=\"CDVSplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "xml": "<feature name=\"ParsePushNotificationPlugin\"><param name=\"ios-package\" value=\"ParsePushNotificationPlugin\" /></feature>",
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"ParsePushNotificationPlugin\"><param name=\"ios-package\" value=\"ParsePushNotificationPlugin\" /></feature>",
+                            "xml": "<feature name=\"SplashScreen\"><param name=\"ios-package\" value=\"CDVSplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
                         }
                     ]
-                }
-            },
-            "*-Info.plist": {
-                "parents": {
-                    "UIBackgroundModes": []
                 }
             }
         }
     },
     "installed_plugins": {
-        "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.ventrux.thescratch"
+        "cordova-plugin-pushnotification-parsepushnotification": {
+            "PACKAGE_NAME": "com.ventrux.thescratchbtw"
         },
         "cordova-plugin-splashscreen": {
-            "PACKAGE_NAME": "com.ventrux.thescratch"
+            "PACKAGE_NAME": "com.ventrux.thescratchbtw"
         },
-        "cordova-plugin-pushnotification-parsepushnotification": {
+        "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.ventrux.thescratchbtw"
         }
     },
     "dependent_plugins": {},
     "modules": [
         {
-            "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
-            "id": "cordova-plugin-splashscreen.SplashScreen",
-            "pluginId": "cordova-plugin-splashscreen",
-            "clobbers": [
-                "navigator.splashscreen"
-            ]
-        },
-        {
             "file": "plugins/cordova-plugin-pushnotification-parsepushnotification/www/parsepushnotification.js",
             "id": "cordova-plugin-pushnotification-parsepushnotification.parsepushnotification",
             "pluginId": "cordova-plugin-pushnotification-parsepushnotification",
             "clobbers": [
                 "window.parsepushnotification"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
+            "id": "cordova-plugin-splashscreen.SplashScreen",
+            "pluginId": "cordova-plugin-splashscreen",
+            "clobbers": [
+                "navigator.splashscreen"
             ]
         }
     ]

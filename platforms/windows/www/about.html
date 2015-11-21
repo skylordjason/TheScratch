@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<title>Company Name</title>
 	<meta id="Viewport" name="viewport">
+<meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no' />
 	<script src="plugins/jquery-1.10.2.min.js"></script>
 	<!-- css -->
 	<link href="css/base.css" rel="stylesheet">
@@ -15,59 +16,10 @@
 	<link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
 
 	<script src="cordova.js"></script>
-	<script>
-		//subscribe callback
-		window.parsepushnotification.onSubscribeToChannelFailed = function() {
-			$('#subfailed_channel').modal('toggle');
-		};
-		//unsubscribe callback
-		window.parsepushnotification.onUnsubscribeSucceeded = function() {
-			$('#unsub').modal('toggle');
-		};
-		window.parsepushnotification.onUnsubscribeFailed = function() {
-			alert('Failed to unsubscribe.');
-		};
-	</script>
 </head>
 
 <body class="avoid-fout page-brand" style="background-color: #262626;color: white !important;">
 	<div id="body">
-		<div aria-hidden="true" class="modal fade" id="subfailed_channel" role="dialog" tabindex="-1">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-heading">
-						<h2 class="modal-title">Houston, we have a problem...</h2></div>
-					<div class="modal-inner">
-						<center>
-							<h4>The Scratch failed to register which notifications your device receives. We'll try again next time.</h4>
-							<br />
-							<br />
-						</center>
-					</div>
-					<div class="modal-footer">
-						<p class="text-right"><a class="btn btn-flat btn-brand waves-attach" data-dismiss="modal">CLOSE</a></p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div aria-hidden="true" class="modal fade" id="unsub" role="dialog" tabindex="-1">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-heading">
-						<h2 class="modal-title">Unsubscribed</h2></div>
-					<div class="modal-inner">
-						<center>
-							<h4>The Scratch removed your device from a notification channel.</h4>
-							<br />
-							<br />
-						</center>
-					</div>
-					<div class="modal-footer">
-						<p class="text-right"><a class="btn btn-flat btn-brand waves-attach" data-dismiss="modal">CLOSE</a></p>
-					</div>
-				</div>
-			</div>
-		</div>
 		<header class="header header-transparent header-waterfall" style="background-color: #2E7D32 !important;">
 			<ul class="nav nav-list pull-left">
 				<li>
@@ -99,23 +51,6 @@
 							</p>
 						</center>
 						<hr />
-						<center>
-							<h4>Manage Subscriptions</h4>
-							<p>All students are automatically subscribed to <br />PUBLIC, CRITICAL, and WEATHER notification channels  <br />which cannot be disabled.</p>
-							<p><a class="btn btn-brand waves-attach waves-button waves-light waves-effect" onclick="window.parsepushnotification.subscribeToChannel('SPORTS');">Subscribe to Sports</a>&nbsp;<a class="btn btn-red waves-attach waves-button waves-light waves-effect"
-								onclick="window.parsepushnotification.unsubscribe('SPORTS');"> - </a></p>
-							<p><a class="btn btn-brand waves-attach waves-button waves-light waves-effect" onclick="window.parsepushnotification.subscribeToChannel('WILLIS');">Subscribe to WILLIS</a>&nbsp;<a class="btn btn-red waves-attach waves-button waves-light waves-effect"
-								onclick="window.parsepushnotification.unsubscribe('WILLIS');"> - </a></p>
-							<p><a class="btn btn-brand waves-attach waves-button waves-light waves-effect" onclick="window.parsepushnotification.subscribeToChannel('WESTMARK');">Subscribe to WESTMARK</a>&nbsp;<a class="btn btn-red waves-attach waves-button waves-light waves-effect"
-								onclick="window.parsepushnotification.unsubscribe('WESTMARK');"> - </a></p>
-							<p><a class="btn btn-brand waves-attach waves-button waves-light waves-effect" onclick="window.parsepushnotification.subscribeToChannel('CARTER');">Subscribe to CARTER</a>&nbsp;<a class="btn btn-red waves-attach waves-button waves-light waves-effect"
-								onclick="window.parsepushnotification.unsubscribe('CARTER');"> - </a></p>
-							<p><a class="btn btn-brand waves-attach waves-button waves-light waves-effect" onclick="window.parsepushnotification.subscribeToChannel('REEVES');">Subscribe to REEVES</a>&nbsp;<a class="btn btn-red waves-attach waves-button waves-light waves-effect"
-								onclick="window.parsepushnotification.unsubscribe('REEVES');"> - </a></p>
-						</center>
-						<br />
-						<br />
-						<br />
 						<center><p>Made in partnership with</p><a href="http://www.fractalcore.net/"><img src="https://fractalcore.net/img/FractalCoretitle.png" style="max-width: 60%;margin: auto;" /></a></center>
 					</div>
 				</div>

@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Company Name</title>
+	<meta id="Viewport" name="viewport">
+<meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no' />
+	<script src="plugins/jquery-1.10.2.min.js"></script>
+	<!-- css -->
+	<link href="css/base.css" rel="stylesheet">
+
+	<!-- css for this project -->
+	<link href="css/project.css" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
+
+	<script src="cordova.js"></script>
+	<script>
+		//subscribe callback
+		window.parsepushnotification.onSubscribeToChannelFailed = function() {
+			$("#subfailed_channel").toggle();
+		};
+		window.parsepushnotification.onUnsubscribeFailed = function() {
+			alert('Failed to unsubscribe.');
+		};
+	</script>
+</head>
+
+<body class="avoid-fout page-brand" style="background-color: #262626;color: white !important;">
+	<div id="body">
+		<div aria-hidden="true" class="modal fade" id="subfailed_channel" role="dialog" tabindex="-1">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-heading">
+						<h2 class="modal-title">Houston, we have a problem...</h2></div>
+					<div class="modal-inner">
+						<center>
+							<h4>The Scratch failed to register which notifications your device receives. We'll try again next time.</h4>
+							<br />
+							<br />
+						</center>
+					</div>
+					<div class="modal-footer">
+						<p class="text-right"><a class="btn btn-flat btn-brand waves-attach" data-dismiss="modal">CLOSE</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div aria-hidden="true" class="modal fade" id="unsuba" role="dialog" tabindex="-1" style="color: black;">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-heading">
+						<h2 class="modal-title">Unsubscribed</h2></div>
+					<div class="modal-inner">
+						<center>
+							<h4>We've unsubscribed you from all optional subscriptions. <br /><br /><strong>Note that you will still receive alerts from PUBLIC and CRITICAL channels.</strong></h4>
+							<br />
+							<br />
+						</center>
+					</div>
+					<div class="modal-footer">
+						<p class="text-right"><a class="btn btn-flat btn-brand waves-attach" data-dismiss="modal">OK</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div aria-hidden="true" class="modal fade" id="succ" role="dialog" tabindex="-1">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-heading">
+						<h2 class="modal-title">Success!</h2></div>
+					<div class="modal-inner">
+						<center>
+							<h4>We've updated your push notification subscriptions.</h4>
+							<br />
+							<br />
+						</center>
+					</div>
+					<div class="modal-footer">
+						<p class="text-right"><a class="btn btn-flat btn-brand waves-attach" data-dismiss="modal">CLOSE</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	<div aria-hidden="false" class="modal fade" id="lmore" role="dialog" tabindex="-1" style="color: white; width: 100%;height: 100vh;padding: 0;margin:0;margin-top: 25px;">
+		<div class="modal-dialog" style="color: white; width: 100%;height: 100vh;padding: 0;margin:0;">
+			<div class="modal-content" style="background-color: #262626;color: white;">
+				<div class="modal-heading" style="background-color: #262626;color: white;">
+					<center><h2 style="margin-bottom: 0;padding-bottom:0;">Subscription Details</h2></center></div>
+				<div class="modal-inner" style="background-color: #262626;color: white;">
+					<center>
+						<h4>Locked Subscriptions</h4>
+						<p>PUBLIC alerts are required for all devices. This issues reminders that go out to all students and is issued by The Scratch staff on behalf of administration.</p>
+						<p>CRITICAL alerts are required for all devices. These are alerts sent out by administration directly and is used for highly important news.</p>
+						<h4>Optional Subscriptions</h4>
+						<p>WEATHER alerts are optional. These are announcements every school day with today's forecast and any active weather alerts.</p>
+						<p>Guidance alerts are optional, but highly recommended. These are issued by your guidance counselor to remind students of important dates.</p>
+						<h4>Coming Soon!</h4>
+						<p>We're trying hard to make this app as awesome as it can be. Because of this, we're allowing club sponsors, coaches, and academy heads to issue notifications to all students subscribed to them.</p>
+					</center>
+				</div>
+				<div class="modal-footer" style="background-color: #262626;color: white;">
+					<p class="text-right"><a class="btn btn-flat btn-brand waves-attach" data-dismiss="modal" style="color: white;">CLOSE</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+		<header class="header header-transparent header-waterfall" style="background-color: #2E7D32 !important;">
+			<ul class="nav nav-list pull-left">
+				<li>
+					<a href="index.html">
+						<i class="fa fa-chevron-left"></i>
+					</a>
+				</li>
+			</ul>
+			<a class="header-logo margin-left-no" href="index.html">The Scratch [BETA]</a>
+		</header>
+
+		<div class="content">
+		<br />
+		<br />
+		<br />
+		<br />
+			<div class="container">
+				<div class="row">
+					<div style="padding: 5px;">
+						<center>
+							<h2 style="margin: 0;padding: 0;">Subscriptions</h2>
+							<hr />
+						</center>
+						<center>
+							<h4>Manage Subscriptions</h4>
+							<p>All students are automatically subscribed to <br />PUBLIC and CRITICAL notification channels  <br />which cannot be disabled. <a data-toggle="modal" href="#lmore">Learn More</a></p>
+						<div class="form-group" style="max-width: 65%;margin: auto; background: #fff;color: black;border-radius: 5px;padding: 5px;">
+							<p><a class="btn btn-brand waves-attach waves-button waves-light waves-effect" onclick="window.parsepushnotification.subscribeToChannel('WILLIS');" style="width: 88%">Subscribe to WILLIS</a>&nbsp;<a style="width: 8%" class="btn btn-red waves-attach waves-button waves-light waves-effect"
+								onclick="window.parsepushnotification.unsubscribe('WILLIS');"> - </a></p>
+							<p><a class="btn btn-brand waves-attach waves-button waves-light waves-effect" onclick="window.parsepushnotification.subscribeToChannel('WESTMARK');" style="width: 88%">Subscribe to WESTMARK</a>&nbsp;<a style="width: 8%" class="btn btn-red waves-attach waves-button waves-light waves-effect"
+								onclick="window.parsepushnotification.unsubscribe('WESTMARK');"> - </a></p>
+							<p><a class="btn btn-brand waves-attach waves-button waves-light waves-effect" onclick="window.parsepushnotification.subscribeToChannel('CARTER');" style="width: 88%">Subscribe to CARTER</a>&nbsp;<a style="width: 8%" class="btn btn-red waves-attach waves-button waves-light waves-effect"
+								onclick="window.parsepushnotification.unsubscribe('CARTER');"> - </a></p>
+							<p><a class="btn btn-brand waves-attach waves-button waves-light waves-effect" onclick="window.parsepushnotification.subscribeToChannel('REEVES');" style="width: 88%">Subscribe to REEVES</a>&nbsp;<a style="width: 8%" class="btn btn-red waves-attach waves-button waves-light waves-effect"
+								onclick="window.parsepushnotification.unsubscribe('REEVES');"> - </a></p>
+							<p><a class="btn btn-amber waves-attach waves-button waves-light waves-effect" onclick="window.parsepushnotification.subscribeToChannel('WEATHER');" style="width: 88%">Subscribe to WEATHER</a>&nbsp;<a style="width: 8%" class="btn btn-red waves-attach waves-button waves-light waves-effect"
+								onclick="window.parsepushnotification.unsubscribe('WEATHER');"> - </a></p>
+						</div>
+						<hr />
+						<a data-toggle="modal" href="#unsuba" onclick="window.parsepushnotification.unsubscribe('WEATHER');window.parsepushnotification.unsubscribe('WILLIS');window.parsepushnotification.unsubscribe('WESTMARK');window.parsepushnotification.unsubscribe('CARTER');window.parsepushnotification.unsubscribe('REEVES');">To unsubscribe from all of the above, tap here.</a>
+						</center>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/base.min.js"></script>
+</body>
+
+</html>

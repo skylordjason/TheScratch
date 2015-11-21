@@ -10,10 +10,10 @@
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.ventrux.thescratch"
         },
-        "cordova-plugin-splashscreen": {
-            "PACKAGE_NAME": "com.ventrux.thescratch"
-        },
         "cordova-plugin-pushnotification-parsepushnotification": {
+            "PACKAGE_NAME": "com.ventrux.thescratchbtw"
+        },
+        "cordova-plugin-splashscreen": {
             "PACKAGE_NAME": "com.ventrux.thescratchbtw"
         }
     },

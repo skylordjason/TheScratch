@@ -4,7 +4,7 @@
     <Languages xmlns="">
         <Language code="en-US" />
     </Languages>
-    <App Author="Trennon Dunn" BitsPerPixel="32" Description="Booker T Washington" Genre="apps.normal" ProductID="{9eaf06f0-8bcf-11e5-bfb7-cb51db92ef5a}" Publisher="Trennon Dunn" PublisherID="{db093ed5-53b1-45f7-af72-751e8f36ab80}" RuntimeType="Silverlight" Title="The Scratch" Version="2.2" xmlns="">
+    <App Author="Trennon Dunn" BitsPerPixel="32" Description="Booker T Washington" Genre="apps.normal" ProductID="{9eaf06f0-8bcf-11e5-bfb7-cb51db92ef5a}" Publisher="Trennon Dunn" PublisherID="{db093ed5-53b1-45f7-af72-751e8f36ab80}" RuntimeType="Silverlight" Title="The Scratch" Version="2.5" xmlns="">
         <IconPath IsRelative="true" IsResource="false">ApplicationIcon.png</IconPath>
         <Capabilities>
             <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />

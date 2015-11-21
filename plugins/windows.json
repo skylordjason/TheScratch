@@ -10,10 +10,10 @@
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "The Scratch"
         },
-        "cordova-plugin-splashscreen": {
+        "cordova-plugin-pushnotification-parsepushnotification": {
             "PACKAGE_NAME": "The Scratch"
         },
-        "cordova-plugin-pushnotification-parsepushnotification": {
+        "cordova-plugin-splashscreen": {
             "PACKAGE_NAME": "The Scratch"
         }
     },

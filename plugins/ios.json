@@ -7,13 +7,13 @@
         "files": {}
     },
     "installed_plugins": {
-        "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.ventrux.thescratch"
+        "cordova-plugin-pushnotification-parsepushnotification": {
+            "PACKAGE_NAME": "com.ventrux.thescratchbtw"
         },
         "cordova-plugin-splashscreen": {
-            "PACKAGE_NAME": "com.ventrux.thescratch"
+            "PACKAGE_NAME": "com.ventrux.thescratchbtw"
         },
-        "cordova-plugin-pushnotification-parsepushnotification": {
+        "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.ventrux.thescratchbtw"
         }
     },
